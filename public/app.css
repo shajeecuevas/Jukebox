@@ -1,0 +1,83 @@
+
+@keyframes colorChange{
+  0% {box-shadow: 15px 10px 100px #ff9696;}
+  10% {box-shadow: 15px 10px 100px #ffc196;}
+  20% {box-shadow: 15px 10px 100px #fff896;}
+  30% {box-shadow: 15px 10px 100px #caff96;}
+  40% {box-shadow: 15px 10px 100px #96ffa3;}
+  50% {box-shadow: 15px 10px 100px #96fffd;}
+  60% {box-shadow: 15px 10px 100px #96c5ff;}
+  70% {box-shadow: 15px 10px 100px #969eff;}
+  80% {box-shadow: 15px 10px 100px #ba96ff;}
+  90% {box-shadow: 15px 10px 100px #e496ff;}
+  100% {box-shadow: 15px 10px 100px #ff96ea;}
+}
+
+@-webkit-colorChange{
+  0% {box-shadow: 15px 10px 100px #ff9696;}
+  10% {box-shadow: 15px 10px 100px #ffc196;}
+  20% {box-shadow: 15px 10px 100px #fff896;}
+  30% {box-shadow: 15px 10px 100px #caff96;}
+  40% {box-shadow: 15px 10px 100px #96ffa3;}
+  50% {box-shadow: 15px 10px 100px #96fffd;}
+  60% {box-shadow: 15px 10px 100px #96c5ff;}
+  70% {box-shadow: 15px 10px 100px #969eff;}
+  80% {box-shadow: 15px 10px 100px #ba96ff;}
+  90% {box-shadow: 15px 10px 100px #e496ff;}
+  100% {box-shadow: 15px 10px 100px #ff96ea;}
+}
+.box{
+  animation:colorChange 15s infinite;
+  -webkit-animation:colorChange 15s infinite;
+  background-color:lightgray;
+  margin: 4% 10% 20px 10%;
+  border-style: solid;
+  padding-left:1%;
+  padding-bottom: 1%;
+  border-radius:8px;
+  padding: 0;
+  border-color:black;
+}
+
+.first{
+  margin-top: 4%;
+}
+
+
+body{
+  background-color: #3d3d3d;
+}
+
+.controls{
+  width: 20%;
+  margin-top:10px;
+
+}
+
+.queueBox{
+  border-style: solid;
+  margin: 10px 10% 10px 10%;
+  border-color: black;
+  background-color: white;
+  border-radius:20px;
+}
+.noBullets{
+  list-style-type: none;
+}
+.keyB{
+  position:fixed;
+  top:25%;
+  right:40%;
+  border-style: solid;
+  background-color: white;
+  padding:2%;
+  border-radius:10px;
+  border-width:thin;
+  z-index: 2;
+  box-shadow: 15px 10px 50px black;
+}
+.hiddenBox{
+  position: fixed;
+  width: 100%;
+  height:100%;
+}

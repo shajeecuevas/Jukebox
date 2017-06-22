@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="app.css">
+  <script src="jquery.min.js"></script>
+  <meta charset="utf-8">
+  <title>JukeBox</title>
+</head>
+<body>
+
+  <div class="keyB"id="keyBox">
+    <strong>To get spotify previews please enter:</strong>
+    <br />
+    Client ID <input type="text" id="clientID" value="">
+    <br />
+    Client Secret <input type="text" id="clientSecret" value="">
+    <br />
+    <center>
+    <button type="button" onclick="keysSubmit()">Submit keys</button>
+  </center>
+    <br />
+    <center>
+    <a href="https://developer.spotify.com/web-api/authorization-guide/">About Spotify API</a>
+  </center>
+  </div>
+  <div id="overlayBox" onclick="hideKey(true)" class="hiddenBox">
+</div>
+  <div class="box" id="box">
+    <center>
+      <audio src="" id="song" onended="JukeBox.changeSong(true)"></audio>
+      <img src="images/previous.png" onclick="JukeBox.changeSong(false)" id="previous" class="controls">
+      <img src="images/playpause.png" onclick="JukeBox.play()" id="playButton"class="controls">
+      <img src="images/next.png" onclick="JukeBox.changeSong(true)" id="next"class="controls">
+      <img src="images/random.png" onclick="JukeBox.randomPlay()" id="random" class="controls">
+      <div class="queueBox">
+        <strong style="font-size:220%">Queue</strong>
+        <br />
+        <strong class="" id="songTime" style="font-size:200%" onclick="JukeBox.changeTimer(!JukeBox.timer)"></strong>
+        <div id="queue"></div>
+        <b>Add mp3 Link </b><input type="text" id="newMP3"><button type="button" onclick="JukeBox.addSong()">Add</button>
+        <br />
+        <div id="spotify">
+          <button type="button" onclick="hideKey(false)"><b>Add Spotify API Keys</b></button>
+        </div>
+        <div id="spotIn" style="display:none">
+          <b>Add Spotify Song Link </b>
+          <input type="text" id="spotLink" value="https://open.spotify.com/track/1fmDKfeOAVy924OhthCLYP"><button type="button" onclick="JukeBox.addSpot()">Add</button>
+        </div>
+      </div>
+    </center>
+  </div>
+</body>
+<script src="app.js"></script>
+</html>
